@@ -19,6 +19,7 @@ classifiers = [
     "Programming Language :: Python :: 3.6",
     "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
+	"Programming Language :: Python :: 3.9",
     "Topic :: Internet",
     "Topic :: Software Development :: Libraries",
     "Topic :: Software Development :: Libraries :: Python Modules",
@@ -29,7 +30,7 @@ packages = [
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.6,<3.9"
+python = ">=3.6,<3.10"
 pydantic = "1.0"
 requests = "2.22.0"
 
@@ -40,4 +41,4 @@ black = "19.10b0"
 
 [tool.black]
 line-length     = 120
-target-version  = ["py36", "py37", "py38"]
+target-version  = ["py36", "py37", "py38", "py39"]
