@@ -19,6 +19,8 @@ class Status(Enum):
     SETTLING = "SETTLING"
     SETTLED = "SETTLED"
     BOUNCED = "BOUNCED"
+    APPROVED = "APPROVED"
+    DECLINED = "DECLINED"
 
 
 class Transaction(CustomBase):
@@ -41,8 +43,8 @@ class Transaction(CustomBase):
     amount: int
     card: Card
     created: datetime
-    events: typing.Tuple[Event]
-    funding: typing.Tuple[Account]
+    events: typing.Sequence[Event]
+    funding: typing.Sequence[Account]
     merchant: Merchant
     result: Result
     settled_amount: int
